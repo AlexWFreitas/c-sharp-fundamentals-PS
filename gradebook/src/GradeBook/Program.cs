@@ -9,15 +9,9 @@ namespace GradeBook
         {
             Book book = new Book("Alex's Grade Book");
 
-            List<double> grades = new List<double>() { 25.2, 40.4, 133.5, 3.6 };
+            book.AddGrades(new List<double>() { 25.2, 40.4, 133.5, 3.6, 34.2, 21.5, 100.01, 0.21, 23.43 });
 
-            foreach( var number in grades )
-            {
-                book.AddGrade(number);
-            }
-            Console.WriteLine(book.Name);
-            book.Name = "One Piece 3333";
-            Console.WriteLine(book.Name);
+            book.ShowStatistics();
         }
     }
 }
