@@ -6,8 +6,7 @@ namespace GradeBook
 {
     class Book
     {
-        List<double> grades;
-        string name;
+        // Public Properties
         public string Name
         {
             set => name = value;
@@ -31,6 +30,7 @@ namespace GradeBook
             }
         }
 
+        // Public Methods
         public void AddGrades(List<double> grades)
         {
             foreach (double grade in grades)
@@ -38,7 +38,21 @@ namespace GradeBook
                 AddGrade(grade);
             }
         }
-        double CalcMaxGrade()
+        public void ShowStatistics()
+        {
+            Console.WriteLine($"The average grade on this grade book is {CalcAverageGrade()}");
+            Console.WriteLine($"The highest grade on this grade book is {CalcMaxGrade()}");
+            Console.WriteLine($"The lowest grade on this grade book is {CalcMinGrade()}");
+        }
+
+
+        // Private Properties
+        private List<double> grades;
+        private string name;
+
+
+        // Private Methods
+        private double CalcMaxGrade()
         {
             double maxValue = double.MinValue;
             foreach(double grade in grades)
@@ -47,7 +61,7 @@ namespace GradeBook
             }
             return maxValue;
         }
-        double CalcMinGrade()
+        private double CalcMinGrade()
         {
             double minValue = double.MaxValue;
             foreach (double grade in grades)
@@ -56,16 +70,9 @@ namespace GradeBook
             }
             return minValue;
         }
-        double CalcAverageGrade()
+        private double CalcAverageGrade()
         {
             return grades.Sum() / grades.Count;
-        }
-
-        public void ShowStatistics()
-        {
-            Console.WriteLine($"The average grade on the grade book is {CalcAverageGrade()}");
-            Console.WriteLine($"The highest grade on the grade book is {CalcMaxGrade()}");
-            Console.WriteLine($"The lowest grade on the grade book is {CalcMinGrade()}");
         }
     }
 }
