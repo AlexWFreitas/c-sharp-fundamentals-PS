@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace GradeBook
 {
-    class Book
+    public class Book
     {
 
         #region Constructors
@@ -12,12 +12,12 @@ namespace GradeBook
         public Book(string name)
         {
             _grades = new List<double>();
-            this._name = name;
+            _name = name;
         }
 
         #endregion
 
-        #region Attributes
+        #region Fields
 
         private List<double> _grades;
 
@@ -26,31 +26,6 @@ namespace GradeBook
         #endregion
 
         #region Methods
-
-        private double CalcMaxGrade()
-        {
-            double maxValue = double.MinValue;
-            foreach (double grade in _grades)
-            {
-                maxValue = Math.Max(grade, maxValue);
-            }
-            return maxValue;
-        }
-
-        private double CalcMinGrade()
-        {
-            double minValue = double.MaxValue;
-            foreach (double grade in _grades)
-            {
-                minValue = Math.Min(grade, minValue);
-            }
-            return minValue;
-        }
-
-        private double CalcAverageGrade()
-        {
-            return _grades.Sum() / _grades.Count;
-        }
 
         public void AddGrade(double grade)
         {
@@ -72,11 +47,21 @@ namespace GradeBook
             }
         }
 
+        public Statistics GetStatistics()
+        {
+            Statistics stats = new Statistics();
+            stats.Average = StatisticsHelper.CalcAverage(_grades);
+            stats.Highest = StatisticsHelper.CalcMax(_grades);
+            stats.Lowest = StatisticsHelper.CalcMin(_grades);
+            return stats;
+        }
+
         public void ShowStatistics()
         {
-            Console.WriteLine($"The average grade on this grade book is {CalcAverageGrade()}");
-            Console.WriteLine($"The highest grade on this grade book is {CalcMaxGrade()}");
-            Console.WriteLine($"The lowest grade on this grade book is {CalcMinGrade()}");
+            Statistics stats = GetStatistics();
+            Console.WriteLine($"The average grade on this grade book is {stats.Average}");
+            Console.WriteLine($"The highest grade on this grade book is {stats.Highest}");
+            Console.WriteLine($"The lowest grade on this grade book is {stats.Lowest}");
         }
 
         #endregion
