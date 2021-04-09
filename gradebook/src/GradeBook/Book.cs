@@ -59,7 +59,7 @@ namespace GradeBook
         public void ShowStatistics()
         {
             Statistics stats = GetStatistics();
-            Console.WriteLine($"The average grade on this grade book is {stats.Average}");
+            Console.WriteLine($"The average grade on this grade book is {stats.Average:N2}");
             Console.WriteLine($"The highest grade on this grade book is {stats.Highest}");
             Console.WriteLine($"The lowest grade on this grade book is {stats.Lowest}");
         }
@@ -72,6 +72,11 @@ namespace GradeBook
         {
             set => _name = value;
             get => _name;
+        }
+
+        public List<double> Grades
+        {
+            get => _grades;
         }
 
         #endregion 

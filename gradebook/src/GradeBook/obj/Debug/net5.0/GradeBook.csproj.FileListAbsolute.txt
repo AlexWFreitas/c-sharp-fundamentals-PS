@@ -5,7 +5,6 @@ F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\bin\Debug\net5.0\Gr
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\bin\Debug\net5.0\GradeBook.dll
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\bin\Debug\net5.0\ref\GradeBook.dll
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\bin\Debug\net5.0\GradeBook.pdb
-F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.csprojAssemblyReference.cache
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.GeneratedMSBuildEditorConfig.editorconfig
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.AssemblyInfoInputs.cache
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.AssemblyInfo.cs
@@ -14,3 +13,4 @@ F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\Gr
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\ref\GradeBook.dll
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.pdb
 F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.genruntimeconfig.cache
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.csprojAssemblyReference.cache

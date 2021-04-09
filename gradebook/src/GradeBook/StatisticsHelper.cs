@@ -6,6 +6,7 @@ namespace GradeBook
 {
     static class StatisticsHelper
     {
+        #region Methods
         public static double CalcAverage(List<double> list)
         {
             return list.Sum() / list.Count;
@@ -13,7 +14,7 @@ namespace GradeBook
 
         public static double CalcMin(List<double> list)
         {
-            double min = double.MinValue;
+            double min = double.MaxValue;
             foreach(double number in list)
             {
                 min = Math.Min(min, number);
@@ -30,5 +31,7 @@ namespace GradeBook
             }
             return max;
         }
+
+        #endregion
     }
 }
