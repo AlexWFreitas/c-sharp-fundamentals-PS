@@ -35,7 +35,41 @@ namespace GradeBook
             }
             else
             {
-                Console.WriteLine($"Error: Grade {grade} is above 100 or lower than 0.");
+                throw new ArgumentException($"Error: Invalid input, {nameof(grade)} is above 100 or lower than 0.");
+            }
+        }
+
+        public void AddGrade(char letter)
+        {
+            switch (letter)
+            {
+                case 'A':
+                    AddGrade(90);
+                    break;
+
+                case 'B':
+                    AddGrade(80);
+                    break;
+
+                case 'C':
+                    AddGrade(70);
+                    break;
+
+                case 'D':
+                    AddGrade(60);
+                    break;
+
+                case 'E':
+                    AddGrade(50);
+                    break;
+
+                case 'F':
+                    AddGrade(40);
+                    break;
+
+                default:
+                    AddGrade(0);
+                    break;
             }
         }
 
@@ -53,6 +87,7 @@ namespace GradeBook
             stats.Average = StatisticsHelper.CalcAverage(_grades);
             stats.Highest = StatisticsHelper.CalcMax(_grades);
             stats.Lowest = StatisticsHelper.CalcMin(_grades);
+            stats.Letter = StatisticsHelper.CalcGradeLetter(_grades);
             return stats;
         }
 
@@ -62,6 +97,7 @@ namespace GradeBook
             Console.WriteLine($"The average grade on this grade book is {stats.Average:N2}");
             Console.WriteLine($"The highest grade on this grade book is {stats.Highest}");
             Console.WriteLine($"The lowest grade on this grade book is {stats.Lowest}");
+            Console.WriteLine($"The average grade letter on this grade book is {stats.Letter}");
         }
 
         #endregion

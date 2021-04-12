@@ -80,6 +80,27 @@ namespace GradeBook.Tests
         {
             Book book = new Book("Name of Book");
 
-            Assert.Equal("Name of Book", book.Name);        }
+            Assert.Equal("Name of Book", book.Name);        
+        }
+
+        [Fact]
+        public void BookAddGradeByLetter()
+        {
+            Book book = new Book("Letter Grade");
+
+            book.AddGrade('A');
+
+            Assert.Equal(90, book.Grades[0]);
+        }
+
+        [Fact]
+        public void BookCalcAverageGradeLetter()
+        {
+            Book book = new Book("Letter Grade");
+
+            book.AddGrades(new List<double>() { 80.5, 80.1, 80.3, 90.75, 80.01, -5 });
+
+            Assert.Equal( 'B', StatisticsHelper.CalcGradeLetter(book.Grades) );
+        }
     }
 }

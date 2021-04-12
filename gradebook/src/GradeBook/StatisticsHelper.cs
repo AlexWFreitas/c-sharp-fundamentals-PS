@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace GradeBook
 {
-    static class StatisticsHelper
+    public static class StatisticsHelper
     {
         #region Methods
         public static double CalcAverage(List<double> list)
@@ -16,45 +16,10 @@ namespace GradeBook
         {
             double min = double.MaxValue;
 
-            // Do While Loop
-
-            /*
-            var index = 0;
-            do
-            {
-                min = Math.Min(min, list[index]);
-                index++;
-            } while (index < list.Count);
-            */
-
-            // While Loop
-
-            var index = 0;
-            while (index < list.Count)
-            {
-                min = Math.Min(min, list[index]);
-                index++;
-            } 
-
-            // For Loop
-
-            /*
-            for (int index = 0; index < list.Count; index++)
-            {
-                min = Math.Min(min, list[index]);
-            }
-            */
-            
-
-            // For Each Loop
-
-            /* 
-            foreach(double number in list)
+            foreach (double number in list)
             {
                 min = Math.Min(min, number);
             }
-            */
-
 
             return min;
         }
@@ -67,6 +32,29 @@ namespace GradeBook
                 max = Math.Max(max, number);
             }
             return max;
+        }
+
+        public static char CalcGradeLetter(List<double> list)
+        {
+            double average = CalcAverage(list);
+
+            switch(average)
+            {
+                case var grade when grade >= 90.0:
+                    return 'A';
+
+                case var grade when grade >= 80.0:
+                    return 'B';
+
+                case var grade when grade >= 70.0:
+                    return 'C';
+
+                case var grade when grade >= 60.0:
+                    return 'D';
+
+                default:
+                    return 'F';
+            }
         }
 
         #endregion
