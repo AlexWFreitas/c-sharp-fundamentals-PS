@@ -7,6 +7,42 @@ namespace GradeBook.Tests
     {
         #region Tests
 
+        [Fact]
+        public void StringsBehaveLikeValueTypes()
+        {
+            // When you change the value of a int variable, you are not changing the value, you are only storing new values inside the variable.
+            // 
+            string name = "Scott";
+            string upper = MakeUpperCase(name);
+
+            Assert.Equal("Scott", name);
+            Assert.Equal("SCOTT", upper);
+        }
+
+        private string MakeUpperCase(string parameter)
+        {
+            return parameter.ToUpper();
+        }
+
+        [Fact]
+        public void ValueTypesAlsoPassByValue()
+        {
+            var x = GetInt();
+            SetInt(ref x);
+
+            Assert.Equal(42, x);
+        }
+
+        private int GetInt()
+        {
+            return 3;
+        }
+
+        private void SetInt(ref int x)
+        {
+            x = 42;
+        }
+
 
         [Fact] 
         public void CSharpCanPassByRef()
@@ -16,7 +52,7 @@ namespace GradeBook.Tests
             // If you change the local variable on the GetBookSetName method, it changes the variable book1 outside of the method.
             // This essentially says that instead of passing a copy of the value of the variable, you are passing the variable itself.
 
-            var book1 = GetBook("Book 1");
+            Book book1 = GetBook("Book 1");
 
             GetBookSetName(ref book1, "New Name");
 

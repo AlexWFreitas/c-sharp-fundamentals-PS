@@ -15,10 +15,47 @@ namespace GradeBook
         public static double CalcMin(List<double> list)
         {
             double min = double.MaxValue;
+
+            // Do While Loop
+
+            /*
+            var index = 0;
+            do
+            {
+                min = Math.Min(min, list[index]);
+                index++;
+            } while (index < list.Count);
+            */
+
+            // While Loop
+
+            var index = 0;
+            while (index < list.Count)
+            {
+                min = Math.Min(min, list[index]);
+                index++;
+            } 
+
+            // For Loop
+
+            /*
+            for (int index = 0; index < list.Count; index++)
+            {
+                min = Math.Min(min, list[index]);
+            }
+            */
+            
+
+            // For Each Loop
+
+            /* 
             foreach(double number in list)
             {
                 min = Math.Min(min, number);
             }
+            */
+
+
             return min;
         }
 
@@ -34,4 +71,4 @@ namespace GradeBook
 
         #endregion
     }
-}
+} 

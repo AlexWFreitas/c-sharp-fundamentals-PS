@@ -64,6 +64,18 @@ namespace GradeBook.Tests
         }
 
         [Fact]
+        public void BookCalculatesAnLowestGrade()
+        {
+            Book book = new Book("Book Name");
+
+            book.AddGrades(new List<double>() { 20.5, 30.1, 60.3, 50.75, 0.01, -5 });
+            double min = book.GetStatistics().Lowest;
+
+            Assert.Equal(0.01, min);
+        }
+
+
+        [Fact]
         public void BookReceivesCorrectName()
         {
             Book book = new Book("Name of Book");
