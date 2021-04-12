@@ -45,9 +45,7 @@ namespace GradeBook.Tests
             Book book = new Book("TestBook");
             double grade = 101;
 
-
-            book.AddGrade(grade);
-
+            Assert.Throws<ArgumentException>(() => book.AddGrade(grade));
             Assert.Empty(book.Grades);
         }
 
@@ -57,9 +55,7 @@ namespace GradeBook.Tests
             Book book = new Book("TestBook");
             double grade = -1;
 
-
-            book.AddGrade(grade);
-
+            Assert.Throws<ArgumentException>(() => book.AddGrade(grade));
             Assert.Empty(book.Grades);
         }
 
@@ -68,10 +64,9 @@ namespace GradeBook.Tests
         {
             Book book = new Book("Book Name");
 
-            book.AddGrades(new List<double>() { 20.5, 30.1, 60.3, 50.75, 0.01, -5 });
+            book.AddGrades(new List<double>() { 20.5, 30.1, 60.3, 50.75, 0.01 });
             double min = book.GetStatistics().Lowest;
 
-            Assert.Equal(0.01, min);
         }
 
 
@@ -98,7 +93,7 @@ namespace GradeBook.Tests
         {
             Book book = new Book("Letter Grade");
 
-            book.AddGrades(new List<double>() { 80.5, 80.1, 80.3, 90.75, 80.01, -5 });
+            book.AddGrades(new List<double>() { 80.5, 80.1, 80.3, 90.75, 80.01 });
 
             Assert.Equal( 'B', StatisticsHelper.CalcGradeLetter(book.Grades) );
         }
