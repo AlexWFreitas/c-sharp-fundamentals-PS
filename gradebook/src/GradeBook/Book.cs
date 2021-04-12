@@ -35,7 +35,7 @@ namespace GradeBook
             }
             else
             {
-                throw new ArgumentException($"Error: Invalid input, {nameof(grade)} is above 100 or lower than 0.");
+                Console.WriteLine($"Error: Invalid input, {nameof(grade)} is above 100 or lower than 0.");
             }
         }
 

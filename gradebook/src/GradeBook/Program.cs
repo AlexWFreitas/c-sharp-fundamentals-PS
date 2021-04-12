@@ -12,43 +12,43 @@ namespace GradeBook
             // Then use book method to show statistics about Average Grade / Highest Grade / Lowest Grade.
             Book book = new Book("Alex's Grade Book");
 
-            while(true)
+            string choice;
+
+            do
             {
-                Console.WriteLine("Enter a grade or 'q' to quit");
-                var input = Console.ReadLine();
-                
-                if(input == "q")
+                Console.WriteLine("Enter an option: ");
+                Console.WriteLine("1. Enter a grade.");
+                Console.WriteLine("2. Show statistics.");
+                Console.WriteLine("3. Show list of grades.");
+                Console.WriteLine("Q. Quit.");
+                choice = Console.ReadLine();
+
+                switch (choice)
                 {
-                    break;
+                    case "1":
+                        Console.WriteLine("Enter a grade: ");
+                        double grade = double.Parse(Console.ReadLine());
+                        book.AddGrade(grade);
+                        break;
+
+                    case "2":
+                        book.ShowStatistics();
+                        break;
+
+                    case "3":
+                        Console.WriteLine("List of Grades: ");
+                        foreach (double number in book.Grades)
+                        {
+                            Console.WriteLine(number);
+                        }
+                        break;
+
+                    default:
+                        break;
                 }
 
-                try
-                {
-                    var grade = double.Parse(input);
-                    book.AddGrade(grade);
-                }
-                catch(ArgumentException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                catch(FormatException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                catch(Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    throw;
-                }
 
-            }
-
-            book.ShowStatistics();
-
-
-            // book.AddGrades(new List<double>() { 25.2, 40.4, 133.5, 3.6, 34.2, 21.5, 100.01, 0.21, 23.43 });
-
-            // book.ShowStatistics();
+            } while (!choice.Equals("Q"));
         }
     }
 }
