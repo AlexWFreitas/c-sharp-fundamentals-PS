@@ -46,6 +46,8 @@ namespace GradeBook.Tests
             double grade = 101;
 
             Assert.Throws<ArgumentException>(() => book.AddGrade(grade));
+            // Cadastrar uma função que vai disparar quando ocorrer uma exceção.
+
             Assert.Empty(book.Grades);
         }
 
