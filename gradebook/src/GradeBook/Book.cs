@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace GradeBook
-{
-    public class Book
+{   
+    public class Book : NamedObject
     {
         #region Delegates
 
@@ -15,7 +15,7 @@ namespace GradeBook
 
         #region Constructors
 
-        public Book(string name)
+        public Book(string name) : base(name)
         {
             Grades = new List<double>();
             Name = name;
@@ -119,15 +119,15 @@ namespace GradeBook
 
         #region Properties
 
-        public string Name
+        public new string Name
         {
             set
             {
-                if(!String.IsNullOrEmpty(value))
+                if (!String.IsNullOrEmpty(value))
                 {
                     _name = value;
                 }
-                else 
+                else
                 {
                     throw new ArgumentException("Entered book name is null or empty.");
                 }
