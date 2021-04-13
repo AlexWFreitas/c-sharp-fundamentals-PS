@@ -12,6 +12,9 @@ namespace GradeBook
             // Then use book method to show statistics about Average Grade / Highest Grade / Lowest Grade.
             Book book = new Book("Alex's Grade Book");
 
+            // Linking the GradeAdded Event to the OnGradeAdded Method
+            book.GradeAdded += OnGradeAdded;
+
             while(true)
             {
                 Console.WriteLine("Enter a grade or 'q' to quit");
@@ -44,11 +47,11 @@ namespace GradeBook
             }
 
             book.ShowStatistics();
+        }
 
-
-            // book.AddGrades(new List<double>() { 25.2, 40.4, 133.5, 3.6, 34.2, 21.5, 100.01, 0.21, 23.43 });
-
-            // book.ShowStatistics();
+        static void OnGradeAdded(object sender, EventArgs e)
+        {
+            Console.WriteLine("Log: Grade as added.");
         }
     }
 }

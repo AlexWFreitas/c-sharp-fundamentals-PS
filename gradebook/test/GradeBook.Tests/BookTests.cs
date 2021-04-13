@@ -99,5 +99,18 @@ namespace GradeBook.Tests
 
             Assert.Equal( 'B', StatisticsHelper.CalcGradeLetter(book.Grades) );
         }
+
+        public void BookChangeNameToNull()
+        {
+            Book book = new Book("Names");
+
+
+            Assert.Throws<ArgumentException>(() => book.Name = "");
+        }
+
+        public void BookCantStartWithoutName()
+        {
+            Assert.Throws<ArgumentException>(() => new Book(""));
+        }
     }
 }

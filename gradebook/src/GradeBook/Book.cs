@@ -6,13 +6,19 @@ namespace GradeBook
 {
     public class Book
     {
+        #region Delegates
+
+        public delegate void GradeAddedDelegate(object sender, EventArgs args);
+        // When creating a delegate for events, it's a convention to pass a "sender" of type object and EventArgs.
+
+        #endregion
 
         #region Constructors
 
         public Book(string name)
         {
-            _grades = new List<double>();
-            _name = name;
+            Grades = new List<double>();
+            Name = name;
         }
 
         #endregion
@@ -32,6 +38,10 @@ namespace GradeBook
             if (grade >= 0 && grade <= 100)
             {
                 _grades.Add(grade);
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
             }
             else
             {
@@ -81,6 +91,10 @@ namespace GradeBook
             }
         }
 
+        // Creates an event that is of delegate type GradeAddedDelegate and can be used to pass methods to other methods.
+        public event GradeAddedDelegate GradeAdded;
+
+
         public Statistics GetStatistics()
         {
             Statistics stats = new Statistics();
@@ -94,6 +108,7 @@ namespace GradeBook
         public void ShowStatistics()
         {
             Statistics stats = GetStatistics();
+            Console.WriteLine($"For the book name {this.Name}");
             Console.WriteLine($"The average grade on this grade book is {stats.Average:N2}");
             Console.WriteLine($"The highest grade on this grade book is {stats.Highest}");
             Console.WriteLine($"The lowest grade on this grade book is {stats.Lowest}");
@@ -106,13 +121,24 @@ namespace GradeBook
 
         public string Name
         {
-            set => _name = value;
+            set
+            {
+                if(!String.IsNullOrEmpty(value))
+                {
+                    _name = value;
+                }
+                else 
+                {
+                    throw new ArgumentException("Entered book name is null or empty.");
+                }
+            }
             get => _name;
         }
 
         public List<double> Grades
         {
             get => _grades;
+            private set => _grades = value;
         }
 
         #endregion 
