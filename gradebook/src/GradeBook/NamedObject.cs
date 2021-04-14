@@ -8,7 +8,7 @@ namespace GradeBook
         {
             Name = name;
         }
-        public string Name
+        public virtual string Name
         {
             get;
             set;

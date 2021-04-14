@@ -119,7 +119,7 @@ namespace GradeBook
 
         #region Properties
 
-        public new string Name
+        public override string Name
         {
             set
             {
