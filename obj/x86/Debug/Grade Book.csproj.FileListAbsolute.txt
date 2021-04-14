@@ -1,0 +1,2 @@
+F:\Workspace\c-sharp-fundamentals-PS\obj\x86\Debug\Grade Book.csprojAssemblyReference.cache
+F:\Workspace\c-sharp-fundamentals-PS\obj\x86\Debug\Grade Book.csproj.CoreCompileInputs.cache

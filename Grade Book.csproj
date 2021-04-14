@@ -1,0 +1,432 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{D54B21A7-1CA1-4383-9E71-ABD38E3E44BF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Grade_Book</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\main" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\main" />
+    <None Include=".git\objects\00\4a581f3eb4914abaebdf59716f55ed51557aed" />
+    <None Include=".git\objects\01\78f1f14881ff5975262cb31088c64709708c1c" />
+    <None Include=".git\objects\02\ae2452690f72487be0646e6b9b14fca0a7d8f3" />
+    <None Include=".git\objects\03\1665c98bdbf557ccacf7caa788d93aeb8d040d" />
+    <None Include=".git\objects\03\62631a8c0d50597ab4ea88a25e35983c6efefe" />
+    <None Include=".git\objects\03\7816dee2ab206cd229b4350f22fe0fb42242e0" />
+    <None Include=".git\objects\03\a2f6889661f78bb4599ab670c188d55f99b033" />
+    <None Include=".git\objects\05\02fb7e51b38c855788557082e44828ac909dc9" />
+    <None Include=".git\objects\05\2fe0beb13e5904851a5917f695913af9edf4f9" />
+    <None Include=".git\objects\07\0cc000544a42e7978629d43aa7598755e70a5c" />
+    <None Include=".git\objects\07\2d9086c3943f1d4f17f822bd19c45ec99463fd" />
+    <None Include=".git\objects\07\e1b5553d22c50135042e3c929353b8c031a182" />
+    <None Include=".git\objects\08\470ca092bd06c573331954cc187b0f46c5e5a0" />
+    <None Include=".git\objects\09\81eb1b3f6f80d3221ca780f358b6af9f0a8beb" />
+    <None Include=".git\objects\0a\5dd69ade5c1e196aa57fce8e12cbbe444383ed" />
+    <None Include=".git\objects\0a\bdc9789d36a505fd1c46c6a3f18e56f964b49e" />
+    <None Include=".git\objects\0b\69fe9d134d8e9f859ac2638534d7bd50a85502" />
+    <None Include=".git\objects\0c\8c41341d3e3e52a4efeaee508994c889784927" />
+    <None Include=".git\objects\0d\7a77a89e247b842bfaeb7aa928039454ea12e2" />
+    <None Include=".git\objects\0d\ad8604e2a9caf41cd2249314fad6e2c73f8522" />
+    <None Include=".git\objects\0e\ac8cfc1621b19c1670616b284c119d2f7ef58d" />
+    <None Include=".git\objects\10\4e3fb083c3151d875e673c757ad377260fd622" />
+    <None Include=".git\objects\12\91ee018632580374c2f93c238af5d0bff97415" />
+    <None Include=".git\objects\13\826b9762c460b50ba074263da772be571a3626" />
+    <None Include=".git\objects\15\8a113f46f7f50d80a96ea3e7fb9a87ed09d362" />
+    <None Include=".git\objects\16\254acf041ca698999d871c1c896bf8d04e09f1" />
+    <None Include=".git\objects\16\d28b9b074e19327cb589cc73fce021496443a0" />
+    <None Include=".git\objects\19\9fe225fc0c871701eabe6ef84afa9f25905594" />
+    <None Include=".git\objects\19\addcc9ec9555e30c39440280725e204f848ec6" />
+    <None Include=".git\objects\1a\15f6fbd4c69b17fcc7982a2fc13e53b19df07b" />
+    <None Include=".git\objects\1b\be66ab15b1fe0bce50a07fec32813a4588cbb9" />
+    <None Include=".git\objects\1c\77b69657c69d0c5a93c0b5bcad81884198834c" />
+    <None Include=".git\objects\1c\dbd9c3dc111e2ce41cff62f54bed811d2b42b6" />
+    <None Include=".git\objects\1d\17ebb0688f5d8a896ee50dc896eea4df1b12a0" />
+    <None Include=".git\objects\1d\2d39a9ef4db524862774d3bf067e0532e99f0d" />
+    <None Include=".git\objects\1e\d5e18e138bc8c49a9993e09f1cb2709ccec6bd" />
+    <None Include=".git\objects\1f\8f990a4ff66a31915b9ba4d3ac4f983b6cdb40" />
+    <None Include=".git\objects\20\1904069818adb5fbd425ce54b95383c96a6b27" />
+    <None Include=".git\objects\20\8d6e7423a934e90c6ac4c5f41fbaceabbab697" />
+    <None Include=".git\objects\20\9ed0a1f0305cb6cfb1a18f36588e6256a52e01" />
+    <None Include=".git\objects\21\48b061ac552ce10119d8fd922c859353f9be6c" />
+    <None Include=".git\objects\21\e196c3377e66d9996c5029800861a5663c3749" />
+    <None Include=".git\objects\22\710257daf4deb66182d8d40bb710e99262380f" />
+    <None Include=".git\objects\25\e47d709386b315fb6783c61489f2445a85dbe3" />
+    <None Include=".git\objects\26\85549814e7ae3d0417b212f6f9d39a781606c2" />
+    <None Include=".git\objects\28\3fc6a41dd4ea53d91a498169af04236736c8b7" />
+    <None Include=".git\objects\29\8a5de5937543dd5d963aaf9a7748d6fbb596ad" />
+    <None Include=".git\objects\2a\6715dde1c1003be2322da1d563730bcff99c59" />
+    <None Include=".git\objects\2a\c3a2c1b4daf7e72beee415ca8dfdcf7dd953d3" />
+    <None Include=".git\objects\2d\f5613aee4cffd5a2c68df64b67bbb52b97c012" />
+    <None Include=".git\objects\2f\41e09abd237043de0a528a51c1cd1cd8d998b6" />
+    <None Include=".git\objects\31\92066c656ea8b0bb30dc0b6f9decca15e88ac1" />
+    <None Include=".git\objects\32\618dda0c97e261bfd7fa2b2bcb47b6865670cd" />
+    <None Include=".git\objects\33\ab5c34f4370d0b50e531f89293526f5e791e72" />
+    <None Include=".git\objects\34\f0070a0c0d8aa57cd5223e562c7a5eb0e2c184" />
+    <None Include=".git\objects\35\07de1232206cfccfa221419754c793190a976a" />
+    <None Include=".git\objects\35\634c63fd94e089b2f2813bf1811b6a58ca1f15" />
+    <None Include=".git\objects\38\0f0391b8ab0b773a5c7acf3a432f5ef1ac9257" />
+    <None Include=".git\objects\39\eba423d56c84130dbdf0eab32baf333b6a2be0" />
+    <None Include=".git\objects\3b\3f3cfad8d72c02609d29ba0fde66890797612d" />
+    <None Include=".git\objects\3c\84af36215fae4196b4fb59806a97b7ca617f5b" />
+    <None Include=".git\objects\3c\fc109f5e5a2bf2e3f9a0559f9bd03202afc4aa" />
+    <None Include=".git\objects\3e\9d2a8b82db8b3819fef0494e0de6a587e89bce" />
+    <None Include=".git\objects\3f\093bfcc55378bbd39e50cb6845cf102de9561b" />
+    <None Include=".git\objects\40\396102ba940173875220463e84a4f704924f87" />
+    <None Include=".git\objects\45\becfe9035eb1e70be082dab259720d33eef1cf" />
+    <None Include=".git\objects\46\2dbcfbfd6bbeb0df8fa2675bf3c2fe3ef80dd5" />
+    <None Include=".git\objects\47\e4f859d8295ada08d40a3b45d8ae7e8eebb245" />
+    <None Include=".git\objects\4a\11b5d3024feb3cf6ea2188c65606c6afee2007" />
+    <None Include=".git\objects\4b\9035074d86165164f84712cd45a73db538561b" />
+    <None Include=".git\objects\4b\b4605f8366b2d6fd2d8400c841aa02e1f34b8a" />
+    <None Include=".git\objects\4b\f58a7162c46e0d446b71f08d5d0c3a9c85ca44" />
+    <None Include=".git\objects\4d\3972df8f4ed9ba9ce073c9c1518b8f7db0dc64" />
+    <None Include=".git\objects\4f\16436e5688c22b892ab331795f10ca1561ec1f" />
+    <None Include=".git\objects\4f\52e263b1e5fed85702030fd4d70928772e77f9" />
+    <None Include=".git\objects\50\ea21ff5be940abe567f5afd39c1fccab6c4c6d" />
+    <None Include=".git\objects\52\834613dcc8c544c3f2252905ca7cb58c9ddd22" />
+    <None Include=".git\objects\53\3e92e6738ed33829151908e89e8a5482ea5cff" />
+    <None Include=".git\objects\53\95c4fec0bc36bb0f8160a89f39ae80ae36a7e0" />
+    <None Include=".git\objects\57\57b8dc9af6ecac36064f7ee6e7cd1a09c1bc4b" />
+    <None Include=".git\objects\5a\bfe0d3a813fc8bdf095a94482aad11f894b2cf" />
+    <None Include=".git\objects\5b\3c17d019547a2cdc2a64b0ca35e104a46f6287" />
+    <None Include=".git\objects\5e\1c795469f1c9e139d0d1ee2c5a08c31b7a998e" />
+    <None Include=".git\objects\5f\490f4520a18ff021011c02a0a7b13031be3373" />
+    <None Include=".git\objects\5f\8e6b2affb0faed5874f029bccfdb68f0761633" />
+    <None Include=".git\objects\60\1c283969e5307e8418db8cf565f7fc73c711a7" />
+    <None Include=".git\objects\69\d8f4c502b85ed95dd31c36db7f73697bbab47c" />
+    <None Include=".git\objects\6a\f70206bef6abdc11da01b6f68d496a9133ab7f" />
+    <None Include=".git\objects\6e\0ae5a364d01b07ce165bc2a31d7c9e33224dc1" />
+    <None Include=".git\objects\6e\5d2ddacdbe79eb759ee14d6104d44ac2c8963c" />
+    <None Include=".git\objects\70\58be678bd9fb528505c520ff19a97bb67b5ad9" />
+    <None Include=".git\objects\70\9c66cc36ba235687d8935e593affa4b3e16833" />
+    <None Include=".git\objects\71\64a4d6126ba36c9b5e58703e378c548699795d" />
+    <None Include=".git\objects\71\dfaedefe32f027d6f5d68989f672f4f7a16493" />
+    <None Include=".git\objects\72\d696758e84799a03242b09975ec9f638c71bfe" />
+    <None Include=".git\objects\73\9ac523e5994717e7735a87ab9c2505f943c0c7" />
+    <None Include=".git\objects\79\c581901e4921d00f369356953dffe83d6558d7" />
+    <None Include=".git\objects\7a\98057ce6798c22e963e2c92281fa4f95e07249" />
+    <None Include=".git\objects\7a\ca9426805d3ac757a7cf7f8722391d158161bc" />
+    <None Include=".git\objects\7b\d9e81bd230b0070fb2086b920e18cef9f90914" />
+    <None Include=".git\objects\7c\4f668743ba26df116859fd2c9e2ec070ce3662" />
+    <None Include=".git\objects\7c\97f1bc71ae8fe503da4241b3ddacf30078c534" />
+    <None Include=".git\objects\7f\2d8c83d525474792e21aed6b5db45cc22f8d09" />
+    <None Include=".git\objects\80\cba6d7c6e239c6dff0f6e656f8a1eaf53d2409" />
+    <None Include=".git\objects\81\2384e3a465f7f52193c4c75e0c7f2703e8e498" />
+    <None Include=".git\objects\81\810b3a7882f7e895409f1e881ad23c0c8445f9" />
+    <None Include=".git\objects\81\dcd424c6538902348dc7253ae65a6cf8fb7cac" />
+    <None Include=".git\objects\85\d999ac175b980ed591ca95e088a5c8fa94d983" />
+    <None Include=".git\objects\85\dbe461d9dd5494a35ff1380605fc1a504a542f" />
+    <None Include=".git\objects\86\d48acbaea85b47652cfc3fb791099c12cced40" />
+    <None Include=".git\objects\89\993c40d8819d69c6cd8b93f9cc96609a8c5d52" />
+    <None Include=".git\objects\89\e133d428833c7fb58f15d7f555491ec0d536d3" />
+    <None Include=".git\objects\8a\a3ce9a602aa08a030d6bbdf2dc6c9a30a620e6" />
+    <None Include=".git\objects\8c\7275282a945ff05747c1219a7566ef27008ebd" />
+    <None Include=".git\objects\8d\25984b1bdbd75187135391fb77dc83cac36446" />
+    <None Include=".git\objects\8e\b2187271cf018fdd4e40523840f5ab07b811c5" />
+    <None Include=".git\objects\8f\4bdeae934916678ae14c563731cf41977d5723" />
+    <None Include=".git\objects\93\f7094805eebc0dc754cf419b9114c276029ca4" />
+    <None Include=".git\objects\94\a9e5cd93782da0b22d6b726e5180f6e0fddb61" />
+    <None Include=".git\objects\96\45fb82a54626f55d4d30d43cfff5f8f5c23820" />
+    <None Include=".git\objects\96\f757235d3ef086e8ccfe17b34d40bb37cd1354" />
+    <None Include=".git\objects\97\76b248773b8e49a93c846e778b8a8ed6b92400" />
+    <None Include=".git\objects\9a\20af6d4fd4949d5941cf6fd08fadc483280550" />
+    <None Include=".git\objects\9b\56fafbe0a7a959d73d8ede2f8add0ccc485ded" />
+    <None Include=".git\objects\9c\1ada68d7a614a4d93efaac0fa8bf7fb92f0d92" />
+    <None Include=".git\objects\9d\0500cd1632c2a5fcfb3bf592306b4cb4223b22" />
+    <None Include=".git\objects\9e\6aecb5293fdfc36cd64e76ec97fdfd1777cdcc" />
+    <None Include=".git\objects\9f\df6ee5373979a42e9f8fcc167d23381b6ffa38" />
+    <None Include=".git\objects\a1\1e63f4988d95916d5b72f2f6a8229f2f9aeaba" />
+    <None Include=".git\objects\a1\885aa39c5d3e79fc419925e779e12f93d332d7" />
+    <None Include=".git\objects\a3\ad1d177e67e0c7999230a0285e771f9fb32ef0" />
+    <None Include=".git\objects\a3\fba8f29df566cf065439b32978df872d43f821" />
+    <None Include=".git\objects\a5\50f221a3757aa03f08d23fe4587aa8f30b811a" />
+    <None Include=".git\objects\a5\d8fb5fc9c927241d058f6121554d1d07575540" />
+    <None Include=".git\objects\a6\54349032d3c6c97f312a3db53540c1f088194d" />
+    <None Include=".git\objects\a6\8ffba7aab48b27576a19afe78b9097a66b4912" />
+    <None Include=".git\objects\a6\d116783dec7695ee29669c8877123402615e9f" />
+    <None Include=".git\objects\a7\54f886327a962adc5163fc6dd011b2dfd21ed8" />
+    <None Include=".git\objects\a7\e9ddf3ff19e11fb29bfc172ab33dcc67aa05ce" />
+    <None Include=".git\objects\a8\68b68e69b109b25e10bce12abdda1a2ea95385" />
+    <None Include=".git\objects\a9\06479c5b48956d2ba2c99787a7372c29a94590" />
+    <None Include=".git\objects\ae\4f8c7c3a6746c6d1ee57e9130d05349e818606" />
+    <None Include=".git\objects\af\7c9100114e2d9efa13bdc0c5ee785d89417738" />
+    <None Include=".git\objects\b1\011370682e90f3c72a69f03cbc8790feacc765" />
+    <None Include=".git\objects\b2\2b53ac47b5dbe7739a6e48c5b6a6f527adcd6e" />
+    <None Include=".git\objects\b3\06097034081737670c9340888d4e28eb633ff9" />
+    <None Include=".git\objects\b8\3910ac45eaa07aa5415a3e0c2e0e80e14a3558" />
+    <None Include=".git\objects\b9\564f84f06ad66b03deadeb09ec7a103e9590ed" />
+    <None Include=".git\objects\ba\20e60fcfde33825b46077d05f22cd76273ce48" />
+    <None Include=".git\objects\bf\fabe6198dc8b07cfac2e661ba319b7527a55e8" />
+    <None Include=".git\objects\c0\8bda8d89da835766d1d3efecb9efc0472ad217" />
+    <None Include=".git\objects\c2\64b3bd99889981021bb611527590b634a95b1e" />
+    <None Include=".git\objects\c5\3ed886587bbbef44dec153680cc63e7273927c" />
+    <None Include=".git\objects\c5\55c4899d9093668e04a46dc959d6a7556c60f3" />
+    <None Include=".git\objects\c5\d17946675174f4c07b507f66004f4864b0896c" />
+    <None Include=".git\objects\c6\ffd06e0193aefb8cb7bf3bd60f7a12496bc96b" />
+    <None Include=".git\objects\c6\ffd898f8a424df00982f69732a3079618f5414" />
+    <None Include=".git\objects\c9\f538f65cd538421c35982f9ed55faf30154445" />
+    <None Include=".git\objects\cb\064446e8e22353ca0d3ab10ffde8193f46dc35" />
+    <None Include=".git\objects\d0\803df1e1ac22314bb9313d7f52bcbb7e76c513" />
+    <None Include=".git\objects\d2\04b159165018d13923140af7489df7a0b3938a" />
+    <None Include=".git\objects\d2\12750c5469642d1002b30836aa44de11b0b6a9" />
+    <None Include=".git\objects\d2\eed985be11d0e597c7e4a716f2e100892303db" />
+    <None Include=".git\objects\d6\045cc9bf219ff4fb4f26d26f6dce43e6ed93dc" />
+    <None Include=".git\objects\d6\3ddc3915c2ec2c856b45670ddd6c760e991e20" />
+    <None Include=".git\objects\d7\454a760575bc69ff14584c9d014afede0ce684" />
+    <None Include=".git\objects\d7\e0c78f0577e275341a0b0cbc2665ff2e87d67d" />
+    <None Include=".git\objects\da\852f328eade6079275604c68543b64c7ead44f" />
+    <None Include=".git\objects\e0\ce5161f8d385c3acc1c872bfd84fbb36be5366" />
+    <None Include=".git\objects\e3\39ac7a9be6ce1854993d3cb59c0b6fabe70933" />
+    <None Include=".git\objects\e4\62017077a3696cfd0e0cae0a3102ddf3664987" />
+    <None Include=".git\objects\e5\85a540f8b3f157de12fb5d6214aa2156bdf5c4" />
+    <None Include=".git\objects\e9\db2b01623e2fce5c8466749061510c752fc243" />
+    <None Include=".git\objects\ea\637ad6877c498fdabb713fd9c8123f8b5d5e2b" />
+    <None Include=".git\objects\ea\7426e9c045edf8f631b2d036ecc7a2a7961f03" />
+    <None Include=".git\objects\ee\b96fab9d66edc9aa5e6ceefaf9374fb669353e" />
+    <None Include=".git\objects\f0\6607d7a42485a2601f820fae33308678c5a87b" />
+    <None Include=".git\objects\f1\5a74595e463574d1f9d30ac664ea49e1865632" />
+    <None Include=".git\objects\f6\5eb8223938388270e1df4e2f71e0415e446437" />
+    <None Include=".git\objects\f7\7e0b9cfbf9fa361a909a5a5aada3815da239b6" />
+    <None Include=".git\objects\f7\c6bff60cb3e5e25d3835c14e48f548d1db4897" />
+    <None Include=".git\objects\f8\3b0c62d1fb3898e433f419a1daad769de1bbbf" />
+    <None Include=".git\objects\fd\e1d627d49a9e952fe8747844c0a8ff245d5612" />
+    <None Include=".git\objects\pack\pack-9a9cace854e4c79c08e14674343bb9d674977f28.idx" />
+    <None Include=".git\objects\pack\pack-9a9cace854e4c79c08e14674343bb9d674977f28.pack" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\main" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\main" />
+    <None Include=".vs\c-sharp-fundamentals-PS\v16\.suo" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="gradebook\.vscode\launch.json" />
+    <None Include="gradebook\.vscode\tasks.json" />
+    <None Include="gradebook\src\GradeBook\.vs\GradeBook\DesignTimeBuild\.dtbcache.v2" />
+    <None Include="gradebook\src\GradeBook\.vs\GradeBook\v16\.suo" />
+    <None Include="gradebook\src\GradeBook\bin\Debug\net5.0\GradeBook.deps.json" />
+    <None Include="gradebook\src\GradeBook\bin\Debug\net5.0\GradeBook.runtimeconfig.dev.json" />
+    <None Include="gradebook\src\GradeBook\bin\Debug\net5.0\GradeBook.runtimeconfig.json" />
+    <None Include="gradebook\src\GradeBook\GradeBook.csproj" />
+    <None Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.AssemblyInfoInputs.cache" />
+    <None Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.assets.cache" />
+    <None Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.csproj.CoreCompileInputs.cache" />
+    <None Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.csprojAssemblyReference.cache" />
+    <None Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.genruntimeconfig.cache" />
+    <None Include="gradebook\src\GradeBook\obj\GradeBook.csproj.nuget.dgspec.json" />
+    <None Include="gradebook\src\GradeBook\obj\GradeBook.csproj.nuget.g.props" />
+    <None Include="gradebook\src\GradeBook\obj\GradeBook.csproj.nuget.g.targets" />
+    <None Include="gradebook\src\GradeBook\obj\project.assets.json" />
+    <None Include="gradebook\src\GradeBook\obj\project.nuget.cache" />
+    <None Include="gradebook\src\GradeBook\obj\Release\net5.0\GradeBook.AssemblyInfoInputs.cache" />
+    <None Include="gradebook\src\GradeBook\obj\Release\net5.0\GradeBook.assets.cache" />
+    <None Include="gradebook\src\GradeBook\obj\Release\net5.0\GradeBook.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.Tests.deps.json" />
+    <None Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.Tests.runtimeconfig.dev.json" />
+    <None Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.Tests.runtimeconfig.json" />
+    <None Include="gradebook\test\GradeBook.Tests\GradeBook.Tests.csproj" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.AssemblyInfoInputs.cache" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.assets.cache" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.csproj.CopyComplete" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.csproj.CoreCompileInputs.cache" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.csprojAssemblyReference.cache" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.genruntimeconfig.cache" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\GradeBook.Tests.csproj.nuget.dgspec.json" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\GradeBook.Tests.csproj.nuget.g.props" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\GradeBook.Tests.csproj.nuget.g.targets" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\project.assets.json" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\project.nuget.cache" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Release\net5.0\GradeBook.Tests.AssemblyInfoInputs.cache" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Release\net5.0\GradeBook.Tests.assets.cache" />
+    <None Include="gradebook\test\GradeBook.Tests\obj\Release\net5.0\GradeBook.Tests.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gradebook\GradeBook.sln" />
+    <Content Include="gradebook\src\GradeBook\bin\Debug\net5.0\GradeBook.dll" />
+    <Content Include="gradebook\src\GradeBook\bin\Debug\net5.0\GradeBook.exe" />
+    <Content Include="gradebook\src\GradeBook\bin\Debug\net5.0\GradeBook.pdb" />
+    <Content Include="gradebook\src\GradeBook\bin\Debug\net5.0\ref\GradeBook.dll" />
+    <Content Include="gradebook\src\GradeBook\obj\Debug\net5.0\apphost.exe" />
+    <Content Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.csproj.FileListAbsolute.txt" />
+    <Content Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.dll" />
+    <Content Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.pdb" />
+    <Content Include="gradebook\src\GradeBook\obj\Debug\net5.0\ref\GradeBook.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.Tests.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.Tests.pdb" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Microsoft.TestPlatform.CommunicationUtilities.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Microsoft.TestPlatform.CoreUtilities.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Microsoft.TestPlatform.CrossPlatEngine.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Microsoft.TestPlatform.Utilities.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.Common.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\Newtonsoft.Json.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\NuGet.Frameworks.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ref\GradeBook.Tests.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\testhost.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\testhost.exe" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\xunit.abstractions.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\xunit.assert.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\xunit.core.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\xunit.execution.dotnet.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\xunit.runner.reporters.netcoreapp10.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\xunit.runner.utility.netcoreapp10.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\bin\Debug\net5.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.csproj.FileListAbsolute.txt" />
+    <Content Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.dll" />
+    <Content Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.pdb" />
+    <Content Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\ref\GradeBook.Tests.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gradebook\src\GradeBook\Book.cs" />
+    <Compile Include="gradebook\src\GradeBook\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="gradebook\src\GradeBook\obj\Debug\net5.0\GradeBook.AssemblyInfo.cs" />
+    <Compile Include="gradebook\src\GradeBook\obj\Release\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="gradebook\src\GradeBook\obj\Release\net5.0\GradeBook.AssemblyInfo.cs" />
+    <Compile Include="gradebook\src\GradeBook\Program.cs" />
+    <Compile Include="gradebook\test\GradeBook.Tests\BookTests.cs" />
+    <Compile Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.AssemblyInfo.cs" />
+    <Compile Include="gradebook\test\GradeBook.Tests\obj\Release\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="gradebook\test\GradeBook.Tests\obj\Release\net5.0\GradeBook.Tests.AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\branches\" />
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\Grade Book\v16\" />
+    <Folder Include="gradebook\src\GradeBook\bin\Release\net5.0\ref\" />
+    <Folder Include="gradebook\src\GradeBook\obj\Release\net5.0\ref\" />
+    <Folder Include="gradebook\test\GradeBook.Tests\bin\Release\net5.0\ref\" />
+    <Folder Include="gradebook\test\GradeBook.Tests\obj\Release\net5.0\ref\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
