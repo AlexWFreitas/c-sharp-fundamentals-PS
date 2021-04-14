@@ -10,17 +10,24 @@ namespace GradeBook
             // Instantiate a Book object called book.
             // Adds a grades list to the book grades list.
             // Then use book method to show statistics about Average Grade / Highest Grade / Lowest Grade.
-            Book book = new Book("Alex's Grade Book");
+            InMemoryBook book = new InMemoryBook("Alex's Grade Book");
 
             // Linking the GradeAdded Event to the OnGradeAdded Method
             book.GradeAdded += OnGradeAdded;
 
-            while(true)
+            EnterGrades(book);
+
+            book.ShowStatistics();
+        }
+
+        private static void EnterGrades(IBook book)
+        {
+            while (true)
             {
                 Console.WriteLine("Enter a grade or 'q' to quit");
                 var input = Console.ReadLine();
-                
-                if(input == "q")
+
+                if (input == "q")
                 {
                     break;
                 }
@@ -30,23 +37,21 @@ namespace GradeBook
                     var grade = double.Parse(input);
                     book.AddGrade(grade);
                 }
-                catch(ArgumentException ex)
+                catch (ArgumentException ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
-                catch(FormatException ex)
+                catch (FormatException ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                     throw;
                 }
 
             }
-
-            book.ShowStatistics();
         }
 
         static void OnGradeAdded(object sender, EventArgs e)

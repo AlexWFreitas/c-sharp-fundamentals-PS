@@ -18,7 +18,7 @@ namespace GradeBook.Tests
         public void BookCalculatesAnAverageGrade()
         {
             // Arrange
-            Book book = new Book("Book Name");
+            InMemoryBook book = new InMemoryBook("Book Name");
 
             // Act ( Kinda )
             book.AddGrades(new List<double>() { 20, 30, 60, 50 } );
@@ -31,7 +31,7 @@ namespace GradeBook.Tests
         [Fact]
         public void BookCalculatesAnAverageGradeWithDecimals()
         {
-            Book book = new Book("Book Name");
+            InMemoryBook book = new InMemoryBook("Book Name");
 
             book.AddGrades(new List<double>() { 20.5, 30.1, 60.3, 50.75 });
             double average = book.GetStatistics().Average;
@@ -42,7 +42,7 @@ namespace GradeBook.Tests
         [Fact]
         public void BookDoesntAddGradeAbove100()
         {
-            Book book = new Book("TestBook");
+            InMemoryBook book = new InMemoryBook("TestBook");
             double grade = 101;
 
             Assert.Throws<ArgumentException>(() => book.AddGrade(grade));
@@ -54,7 +54,7 @@ namespace GradeBook.Tests
         [Fact]
         public void BookDoesntAddGradeBelowZero()
         {
-            Book book = new Book("TestBook");
+            InMemoryBook book = new InMemoryBook("TestBook");
             double grade = -1;
 
             Assert.Throws<ArgumentException>(() => book.AddGrade(grade));
@@ -64,7 +64,7 @@ namespace GradeBook.Tests
         [Fact]
         public void BookCalculatesAnLowestGrade()
         {
-            Book book = new Book("Book Name");
+            InMemoryBook book = new InMemoryBook("Book Name");
 
             book.AddGrades(new List<double>() { 20.5, 30.1, 60.3, 50.75, 0.01 });
             double min = book.GetStatistics().Lowest;
@@ -75,7 +75,7 @@ namespace GradeBook.Tests
         [Fact]
         public void BookReceivesCorrectName()
         {
-            Book book = new Book("Name of Book");
+            InMemoryBook book = new InMemoryBook("Name of Book");
 
             Assert.Equal("Name of Book", book.Name);        
         }
@@ -83,7 +83,7 @@ namespace GradeBook.Tests
         [Fact]
         public void BookAddGradeByLetter()
         {
-            Book book = new Book("Letter Grade");
+            InMemoryBook book = new InMemoryBook("Letter Grade");
 
             book.AddGrade('A');
 
@@ -93,24 +93,26 @@ namespace GradeBook.Tests
         [Fact]
         public void BookCalcAverageGradeLetter()
         {
-            Book book = new Book("Letter Grade");
+            InMemoryBook book = new InMemoryBook("Letter Grade");
 
             book.AddGrades(new List<double>() { 80.5, 80.1, 80.3, 90.75, 80.01 });
 
             Assert.Equal( 'B', StatisticsHelper.CalcGradeLetter(book.Grades) );
         }
 
+        [Fact]
         public void BookChangeNameToNull()
         {
-            Book book = new Book("Names");
+            InMemoryBook book = new InMemoryBook("Names");
 
 
             Assert.Throws<ArgumentException>(() => book.Name = "");
         }
 
+        [Fact]
         public void BookCantStartWithoutName()
         {
-            Assert.Throws<ArgumentException>(() => new Book(""));
+            Assert.Throws<ArgumentException>(() => new InMemoryBook(""));
         }
     }
 }

@@ -24,11 +24,17 @@ namespace GradeBook.Tests
             Assert.Equal(2, delegateMethodCalls);
         }
 
+        /// <summary>
+        /// Retorna a string recebida.
+        /// </summary>
+        /// <param name="message">Mensagem em formato de string.</param>
+        /// <returns>Retorna a string.</returns>
         string ReturnMessage(string message)
         {
             delegateMethodCalls++;
             return message;
         }
+
         string ReturnLowerMessage(string message)
         {
             delegateMethodCalls++;
@@ -80,7 +86,7 @@ namespace GradeBook.Tests
             // If you change the local variable on the GetBookSetName method, it changes the variable book1 outside of the method.
             // This essentially says that instead of passing a copy of the value of the variable, you are passing the variable itself.
 
-            Book book1 = GetBook("Book 1");
+            InMemoryBook book1 = GetBook("Book 1");
 
             GetBookSetName(ref book1, "New Name");
 
@@ -90,13 +96,13 @@ namespace GradeBook.Tests
         // Notice that the method below has the same name as another method, but received different parameters.
         // This is called Method Overloading, where a method can accept different parameters or even have differnt types of returns. 
         // Then they can display different behavior according to what they receive.
-        private void GetBookSetName(ref Book book, string name)
+        private void GetBookSetName(ref InMemoryBook book, string name)
         {
-            book = new Book(name);
+            book = new InMemoryBook(name);
         }
-        private void GetBookSetName(Book book, string name)
+        private void GetBookSetName(InMemoryBook book, string name)
         {
-            book = new Book(name);
+            book = new InMemoryBook(name);
         }
 
 
@@ -173,19 +179,19 @@ namespace GradeBook.Tests
 
         #region Test Helpers
 
-        private Book GetBook(string name)
+        private InMemoryBook GetBook(string name)
         {
-            return new Book(name);
+            return new InMemoryBook(name);
         }
 
-        private Book SetName(Book book, string name)
+        private InMemoryBook SetName(InMemoryBook book, string name)
         {
             book.Name = name;
             return book;
         }
-        private Book GetBookReturnBook(Book book, string name)
+        private InMemoryBook GetBookReturnBook(InMemoryBook book, string name)
         {
-            return book = new Book(name);
+            return book = new InMemoryBook(name);
         }
 
         #endregion
