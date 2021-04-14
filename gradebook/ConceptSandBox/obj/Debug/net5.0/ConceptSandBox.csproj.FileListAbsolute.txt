@@ -1,0 +1,15 @@
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\bin\Debug\net5.0\ConceptSandBox.exe
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\bin\Debug\net5.0\ConceptSandBox.deps.json
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\bin\Debug\net5.0\ConceptSandBox.runtimeconfig.json
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\bin\Debug\net5.0\ConceptSandBox.runtimeconfig.dev.json
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\bin\Debug\net5.0\ConceptSandBox.dll
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\bin\Debug\net5.0\ref\ConceptSandBox.dll
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\bin\Debug\net5.0\ConceptSandBox.pdb
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\obj\Debug\net5.0\ConceptSandBox.GeneratedMSBuildEditorConfig.editorconfig
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\obj\Debug\net5.0\ConceptSandBox.AssemblyInfoInputs.cache
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\obj\Debug\net5.0\ConceptSandBox.AssemblyInfo.cs
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\obj\Debug\net5.0\ConceptSandBox.csproj.CoreCompileInputs.cache
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\obj\Debug\net5.0\ConceptSandBox.dll
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\obj\Debug\net5.0\ref\ConceptSandBox.dll
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\obj\Debug\net5.0\ConceptSandBox.pdb
+F:\Workspace\c-sharp-fundamentals-PS\gradebook\ConceptSandBox\obj\Debug\net5.0\ConceptSandBox.genruntimeconfig.cache
