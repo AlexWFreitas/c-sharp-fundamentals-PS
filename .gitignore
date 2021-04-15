@@ -1,3 +1,12 @@
 **/.vs
 **/.vs
 /gradebook/.vs/GradeBook/DesignTimeBuild/.dtbcache.v2
+/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.csproj.CoreCompileInputs.cache
+/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.csprojAssemblyReference.cache
+/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.dll
+/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.pdb
+/gradebook/src/GradeBook/obj/Debug/net5.0/ref/GradeBook.dll
+/gradebook/src/GradeBook/obj/Release/net5.0/GradeBook.csprojAssemblyReference.cache
+/gradebook/src/GradeBook/bin/Debug/net5.0/GradeBook.dll
+/gradebook/src/GradeBook/bin/Debug/net5.0/GradeBook.pdb
+/gradebook/src/GradeBook/bin/Debug/net5.0/ref/GradeBook.dll

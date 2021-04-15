@@ -108,8 +108,7 @@ namespace GradeBook
         public override Statistics GetStatistics()
         {
             string filepath = $"{this.filepath}{Name}.txt";
-            Statistics stats = new Statistics(GenerateGradeList(filepath));
-            return stats;
+            return new Statistics(GenerateGradeList(filepath));
         }
 
         public override void ShowStatistics()
