@@ -85,11 +85,11 @@ namespace GradeBook
             }
         }
 
-        public List<double> GenerateGradeList()
+        public List<double> GenerateGradeList(string filepath)
         {
             List<double> grades = new List<double>();
 
-            using (StreamReader reader = File.OpenText($"{filepath}{Name}.txt"))
+            using (StreamReader reader = File.OpenText(filepath))
             {
                 string[] stringArray = reader.ReadToEnd().Split("\n");
 
@@ -107,7 +107,8 @@ namespace GradeBook
 
         public override Statistics GetStatistics()
         {
-            Statistics stats = new Statistics(GenerateGradeList());
+            string filepath = $"{this.filepath}{Name}.txt";
+            Statistics stats = new Statistics(GenerateGradeList(filepath));
             return stats;
         }
 
