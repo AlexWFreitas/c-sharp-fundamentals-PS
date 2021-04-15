@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GradeBook
+﻿namespace GradeBook
 {
     public class NamedObject
     {

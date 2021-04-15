@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GradeBook
+﻿namespace GradeBook
 {
     public interface IBook
     {
@@ -8,5 +6,6 @@ namespace GradeBook
         event GradeAddedDelegate GradeAdded;
         void AddGrade(double grade);
         Statistics GetStatistics();
+        void ShowStatistics();
     }
 }

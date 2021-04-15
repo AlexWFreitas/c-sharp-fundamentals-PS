@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace GradeBook
 {
@@ -97,22 +96,14 @@ namespace GradeBook
 
         public override Statistics GetStatistics()
         {
-            Statistics stats = new Statistics();
-            stats.Average = StatisticsHelper.CalcAverage(_grades);
-            stats.Highest = StatisticsHelper.CalcMax(_grades);
-            stats.Lowest = StatisticsHelper.CalcMin(_grades);
-            stats.Letter = StatisticsHelper.CalcGradeLetter(_grades);
+            Statistics stats = new Statistics(Grades);
             return stats;
         }
 
-        public void ShowStatistics()
+        public override void ShowStatistics()
         {
             Statistics stats = GetStatistics();
-            Console.WriteLine($"For the book name {this.Name}");
-            Console.WriteLine($"The average grade on this grade book is {stats.Average:N2}");
-            Console.WriteLine($"The highest grade on this grade book is {stats.Highest}");
-            Console.WriteLine($"The lowest grade on this grade book is {stats.Lowest}");
-            Console.WriteLine($"The average grade letter on this grade book is {stats.Letter}");
+            stats.ShowStatistics(Name);
         }
 
         #endregion

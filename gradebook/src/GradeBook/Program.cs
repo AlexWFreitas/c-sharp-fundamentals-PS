@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace GradeBook
 {
@@ -10,7 +9,7 @@ namespace GradeBook
             // Instantiate a Book object called book.
             // Adds a grades list to the book grades list.
             // Then use book method to show statistics about Average Grade / Highest Grade / Lowest Grade.
-            InMemoryBook book = new InMemoryBook("Alex's Grade Book");
+            IBook book = new DiskBook("Alex Grade Book");
 
             // Linking the GradeAdded Event to the OnGradeAdded Method
             book.GradeAdded += OnGradeAdded;
