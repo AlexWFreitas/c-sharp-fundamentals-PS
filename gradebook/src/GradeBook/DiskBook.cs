@@ -16,7 +16,7 @@ namespace GradeBook
 
         #region Fields and Events
 
-        public override event GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate? GradeAdded;
 
         readonly string filepath = "F:\\Workspace\\c-sharp-fundamentals-PS\\gradebook\\src\\GradeBook\\";
 

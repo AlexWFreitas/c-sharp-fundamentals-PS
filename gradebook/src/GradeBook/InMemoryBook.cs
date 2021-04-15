@@ -9,8 +9,8 @@ namespace GradeBook
 
         public InMemoryBook(string name) : base(name)
         {
-            Grades = new List<double>();
-            Name = name;
+            _grades = new List<double>();
+            _name = name;
         }
 
         #endregion
@@ -91,7 +91,7 @@ namespace GradeBook
         }
 
         // Creates an event that is of delegate type GradeAddedDelegate and can be used to pass methods to other methods.
-        public override event GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate? GradeAdded;
 
 
         public override Statistics GetStatistics()

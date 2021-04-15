@@ -97,7 +97,7 @@ namespace GradeBook.Tests
 
             book.AddGrades(new List<double>() { 80.5, 80.1, 80.3, 90.75, 80.01 });
 
-            Assert.Equal( 'B', StatisticsHelper.CalcGradeLetter(book.Grades) );
+            Assert.Equal( 'B', Statistics.CalcGradeLetter(book.Grades) );
         }
 
         [Fact]
